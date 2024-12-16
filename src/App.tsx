@@ -5,14 +5,13 @@ const App: React.FC = () => {
     const [page, setPage] = useState<number>(1);
     const [_selectedArtworks, setSelectedArtworks] = useState<any[]>([]);
 
-    // This updates the current page in state when the user navigates pages.
     const handlePageChange = (event: { page: number }) => {
-        setPage(event.page + 1); // 1-based index for API
+        setPage(event.page + 1);
     };
 
-    // Track selected rows from the DataTable
+    //For tracking selected rows from the datatable
     const handleSelectedArtworksChange = (selectedRows: any[]) => {
-        setSelectedArtworks(selectedRows); // Sync state with the selected rows
+        setSelectedArtworks(selectedRows); 
     };
 
     return (
